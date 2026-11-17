@@ -4,6 +4,17 @@
 
 Artbrewify is a rebranded, rebuilt successor to [Artify](https://github.com/sentouki/Artify) by Rodion Chaykovskiy (MIT), modernized from .NET Core 3.1 / WPF to **.NET 8 / WinUI 3**.
 
+[![GitHub release](https://img.shields.io/github/v/release/pinkythegawd/Artbrewify?style=flat-square)](https://github.com/pinkythegawd/Artbrewify/releases/latest)
+
+## Download
+
+Prebuilt Windows binaries are on the [Releases page](https://github.com/pinkythegawd/Artbrewify/releases/latest):
+
+- **Artbrewify-1.0.0-Setup.exe** — installer (recommended): per-user install, shortcuts, uninstaller.
+- **Artbrewify-1.0.0-portable-x64.exe** — portable single-file exe, no install needed.
+
+Both are self-contained — no .NET or Windows App SDK install required. Prefer to build it yourself? See [Build & run](#build--run).
+
 ## Features
 
 - Download an artist's entire gallery from ArtStation, Pixiv, or DeviantArt
