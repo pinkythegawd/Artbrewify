@@ -1,0 +1,39 @@
+<Application
+    x:Class="Artbrewify.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    RequestedTheme="Dark">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Color x:Key="BrandAmberColor">#E8A33D</Color>
+            <Color x:Key="BrandCoralColor">#E86A4C</Color>
+            <Color x:Key="BrandTealColor">#3FB8AF</Color>
+            <Color x:Key="SurfaceColor">#1B1713</Color>
+            <Color x:Key="SurfaceAltColor">#241E18</Color>
+            <Color x:Key="BackgroundColor">#100D0B</Color>
+
+            <SolidColorBrush x:Key="BrandAmberBrush" Color="{StaticResource BrandAmberColor}" />
+            <SolidColorBrush x:Key="BrandCoralBrush" Color="{StaticResource BrandCoralColor}" />
+            <SolidColorBrush x:Key="BrandTealBrush" Color="{StaticResource BrandTealColor}" />
+            <SolidColorBrush x:Key="SurfaceBrush" Color="{StaticResource SurfaceColor}" />
+            <SolidColorBrush x:Key="SurfaceAltBrush" Color="{StaticResource SurfaceAltColor}" />
+            <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}" />
+
+            <!-- Override the system accent palette with the brand amber -->
+            <Color x:Key="SystemAccentColor">#E8A33D</Color>
+            <Color x:Key="SystemAccentColorLight1">#EDB562</Color>
+            <Color x:Key="SystemAccentColorLight2">#F2C787</Color>
+            <Color x:Key="SystemAccentColorLight3">#F7D9AC</Color>
+            <Color x:Key="SystemAccentColorDark1">#C98A2E</Color>
+            <Color x:Key="SystemAccentColorDark2">#A9731F</Color>
+            <Color x:Key="SystemAccentColorDark3">#8A5D15</Color>
+
+            <x:String x:Key="AppDisplayName">Artbrewify</x:String>
+            <x:String x:Key="AppTagline">Brew your art collection</x:String>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

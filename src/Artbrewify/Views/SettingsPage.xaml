@@ -1,0 +1,68 @@
+<Page
+    x:Class="Artbrewify.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer>
+        <StackPanel Spacing="16" MaxWidth="900" HorizontalAlignment="Left">
+            <TextBlock Text="Settings" FontSize="28" FontWeight="SemiBold" Margin="0,4,0,8" />
+
+            <InfoBar x:Name="SettingsMessageBar" IsOpen="False" IsClosable="True" />
+
+            <!-- Download behavior -->
+            <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Padding="20">
+                <StackPanel Spacing="14">
+                    <TextBlock Text="Downloads" FontSize="16" FontWeight="SemiBold" />
+                    <StackPanel Orientation="Horizontal" Spacing="24">
+                        <NumberBox x:Name="ConcurrentBox" Header="Concurrent downloads"
+                                   Minimum="1" Maximum="16" SpinButtonPlacementMode="Compact" Width="180"
+                                   ValueChanged="ConcurrentBox_ValueChanged" />
+                        <NumberBox x:Name="RetryBox" Header="Retry attempts"
+                                   Minimum="1" Maximum="10" SpinButtonPlacementMode="Compact" Width="160"
+                                   ValueChanged="RetryBox_ValueChanged" />
+                        <NumberBox x:Name="TimeoutBox" Header="Timeout (seconds)"
+                                   Minimum="5" Maximum="300" SpinButtonPlacementMode="Compact" Width="170"
+                                   ValueChanged="TimeoutBox_ValueChanged" />
+                    </StackPanel>
+                    <ToggleSwitch x:Name="UgoiraToggle" Header="Convert Pixiv animations (ugoira) to GIF"
+                                  Toggled="UgoiraToggle_Toggled" />
+                    <ToggleSwitch x:Name="MatureToggle" Header="Include mature content (DeviantArt)"
+                                  Toggled="MatureToggle_Toggled" />
+                    <TextBlock Foreground="#8A7D70" FontSize="12" TextWrapping="Wrap"
+                               Text="Higher concurrency downloads faster but may trigger rate limits or bans. Keep it modest." />
+                </StackPanel>
+            </Border>
+
+            <!-- Pixiv account -->
+            <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Padding="20">
+                <StackPanel Spacing="12">
+                    <TextBlock Text="Pixiv account" FontSize="16" FontWeight="SemiBold" />
+                    <TextBlock x:Name="PixivStatusText" Foreground="#B8A99A" TextWrapping="Wrap" />
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <Button x:Name="PixivLoginButton" Content="Log in to Pixiv"
+                                Style="{StaticResource AccentButtonStyle}" Click="PixivLoginButton_Click" />
+                        <Button x:Name="PixivLogoutButton" Content="Log out" Click="PixivLogoutButton_Click" />
+                    </StackPanel>
+                    <TextBlock Foreground="#8A7D70" FontSize="12" TextWrapping="Wrap"
+                               Text="A browser window opens for you to sign in. Your refresh token is stored encrypted with Windows DPAPI." />
+                </StackPanel>
+            </Border>
+
+            <!-- DeviantArt API -->
+            <Border Background="{StaticResource SurfaceBrush}" CornerRadius="8" Padding="20">
+                <StackPanel Spacing="12">
+                    <TextBlock Text="DeviantArt API" FontSize="16" FontWeight="SemiBold" />
+                    <TextBlock Foreground="#B8A99A" TextWrapping="Wrap" FontSize="13"
+                               Text="Register your own app at deviantart.com/developers (OAuth2, client_credentials grant), then paste its credentials here. They are stored encrypted." />
+                    <TextBox x:Name="DaClientIdBox" Header="Client ID" />
+                    <PasswordBox x:Name="DaClientSecretBox" Header="Client secret" />
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <Button x:Name="DaSaveButton" Content="Save &amp; test" Click="DaSaveButton_Click" />
+                        <TextBlock x:Name="DaStatusText" VerticalAlignment="Center" Foreground="#B8A99A" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
