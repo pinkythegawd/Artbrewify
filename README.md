@@ -26,6 +26,19 @@ dotnet build Artbrewify.sln
 dotnet run --project src/Artbrewify
 ```
 
+## Distribution builds
+
+Two self-contained artifacts can be produced — neither requires the .NET runtime on the target machine:
+
+| Artifact | What it is | How to build |
+|---|---|---|
+| Portable exe | A single `Artbrewify.exe`; dependencies extract to a temp dir on first launch | `dotnet publish src/Artbrewify -c Release -p:PublishProfile=SingleFile` |
+| Installer | `Artbrewify-1.0.0-Setup.exe` (Inno Setup) wrapping the self-contained folder | `dotnet publish src/Artbrewify -c Release -p:PublishProfile=Portable`, then compile `installer/Artbrewify.iss` |
+
+Or run `build.cmd` to produce both in one step. Building the installer additionally requires [Inno Setup 6](https://jrsoftware.org/isinfo.php) (`winget install JRSoftware.InnoSetup`).
+
+Output lands in `artifacts/singlefile/` and `artifacts/installer/`.
+
 ## Platform setup
 
 | Platform | What you need |
