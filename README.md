@@ -61,8 +61,8 @@
 
 Download the latest build from the [Releases page](https://github.com/pinkythegawd/Artbrewify/releases/latest):
 
-- **[Artbrewify-1.0.0-Setup.exe](https://github.com/pinkythegawd/Artbrewify/releases/download/v1.0.0/Artbrewify-1.0.0-Setup.exe)** — installer (recommended): per-user install, Start-menu shortcut, uninstaller.
-- **[Artbrewify-1.0.0-portable-x64.exe](https://github.com/pinkythegawd/Artbrewify/releases/download/v1.0.0/Artbrewify-1.0.0-portable-x64.exe)** — portable single-file exe; no install needed.
+- **[Artbrewify-1.0.1-Setup.exe](https://github.com/pinkythegawd/Artbrewify/releases/download/v1.0.1/Artbrewify-1.0.1-Setup.exe)** — installer (recommended): per-user install, Start-menu shortcut, uninstaller.
+- **[Artbrewify-1.0.1-portable-x64.exe](https://github.com/pinkythegawd/Artbrewify/releases/download/v1.0.1/Artbrewify-1.0.1-portable-x64.exe)** — portable single-file exe; no install needed.
 
 Both are **self-contained** — no .NET or Windows App SDK install required. Windows 10 version 2004 (build 19041) or later, x64.
 
@@ -95,7 +95,7 @@ Two self-contained distribution artifacts can be produced:
 | Artifact | What it is | How to build |
 |---|---|---|
 | Portable exe | A single `Artbrewify.exe`; dependencies extract to a temp dir on first launch | `dotnet publish src/Artbrewify -c Release -p:PublishProfile=SingleFile` |
-| Installer | `Artbrewify-1.0.0-Setup.exe` (Inno Setup) wrapping the self-contained folder | `dotnet publish src/Artbrewify -c Release -p:PublishProfile=Portable`, then compile `installer/Artbrewify.iss` |
+| Installer | `Artbrewify-1.0.1-Setup.exe` (Inno Setup) wrapping the self-contained folder | `dotnet publish src/Artbrewify -c Release -p:PublishProfile=Portable`, then compile `installer/Artbrewify.iss` |
 
 Or run `build.cmd` to produce both in one step. Building the installer additionally requires [Inno Setup 6](https://jrsoftware.org/isinfo.php) (`winget install JRSoftware.InnoSetup`). Output lands in `artifacts/singlefile/` and `artifacts/installer/`.
 

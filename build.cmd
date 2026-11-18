@@ -32,5 +32,5 @@ if errorlevel 1 exit /b 1
 echo.
 echo Done.
 echo   Portable exe : artifacts\singlefile\Artbrewify.exe
-echo   Installer    : artifacts\installer\Artbrewify-1.0.0-Setup.exe
+echo   Installer    : artifacts\installer\Artbrewify-1.0.1-Setup.exe
 endlocal

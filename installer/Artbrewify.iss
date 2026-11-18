@@ -2,7 +2,7 @@
 ; Packages the self-contained publish output (artifacts/portable) into a single setup exe.
 
 #define MyAppName "Artbrewify"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.0.1"
 #define MyAppPublisher "MikePinku (pinkythegawd)"
 #define MyAppURL "https://github.com/pinkythegawd/Artbrewify"
 #define MyAppExeName "Artbrewify.exe"

@@ -10,7 +10,7 @@
                 <StackPanel VerticalAlignment="Center">
                     <TextBlock Text="Artbrewify" FontSize="28" FontWeight="SemiBold"
                                Foreground="{StaticResource BrandAmberBrush}" />
-                    <TextBlock Text="Brew your art collection · v1.0.0" Foreground="#B8A99A" FontSize="13" />
+                    <TextBlock Text="Brew your art collection · v1.0.1" Foreground="#B8A99A" FontSize="13" />
                 </StackPanel>
             </StackPanel>
 
