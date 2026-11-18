@@ -15,7 +15,7 @@ public sealed partial class MainWindow : Window
 
         var iconPath = Path.Combine(AppContext.BaseDirectory, "Assets", "app.ico");
         if (File.Exists(iconPath)) AppWindow.SetIcon(iconPath);
-        AppWindow.Resize(new SizeInt32(1120, 780));
+        AppWindow.Resize(new SizeInt32(640, 850));
     }
 
     private void NavView_Loaded(object sender, RoutedEventArgs e)

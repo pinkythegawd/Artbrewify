@@ -38,7 +38,7 @@
 ## Screenshots
 
 <p align="center">
-  <img src="assets/screenshot-main.png" alt="Artbrewify main window showing the download page with platform selector, artist input and destination folder" width="820" />
+  <img src="assets/screenshot-main.png" alt="Artbrewify main window showing the download page with platform selector, artist input and destination folder" width="420" />
 </p>
 
 ## Features

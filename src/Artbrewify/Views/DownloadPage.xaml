@@ -5,7 +5,7 @@
     Loaded="DownloadPage_Loaded">
 
     <ScrollViewer>
-        <StackPanel Spacing="16" MaxWidth="900" HorizontalAlignment="Left">
+        <StackPanel Spacing="16" MaxWidth="900">
 
             <!-- Brand header -->
             <StackPanel Orientation="Horizontal" Spacing="16" Margin="0,4,0,8">
